@@ -1,0 +1,89 @@
+.authContainer {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.authContainer h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  color: #333;
+}
+
+.inputGroup input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(46, 133, 85, 0.2);
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 0.5rem;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.toggleText {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.toggleText a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.toggleText a:hover {
+  text-decoration: underline;
+}

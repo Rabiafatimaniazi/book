@@ -1,0 +1,108 @@
+# API Contract: GitHub Repository Creation and Push
+
+## Repository Creation Endpoint
+
+### POST /api/github/create-repository
+
+**Description**: Creates a new GitHub repository
+
+**Request**:
+```json
+{
+  "name": "string",
+  "description": "string",
+  "private": "boolean",
+  "auto_init": "boolean",
+  "gitignore_template": "string",
+  "license_template": "string"
+}
+```
+
+**Response (Success)**:
+```json
+{
+  "success": true,
+  "repository_url": "string",
+  "clone_url": "string",
+  "ssh_url": "string"
+}
+```
+
+**Response (Error)**:
+```json
+{
+  "success": false,
+  "error_code": "string",
+  "message": "string"
+}
+```
+
+**Authentication**: Bearer token (GitHub PAT)
+
+## Repository Push Endpoint
+
+### POST /api/github/push-changes
+
+**Description**: Pushes local changes to GitHub repository
+
+**Request**:
+```json
+{
+  "local_path": "string",
+  "remote_name": "string",
+  "branch": "string",
+  "commit_message": "string"
+}
+```
+
+**Response (Success)**:
+```json
+{
+  "success": true,
+  "commit_hash": "string",
+  "message": "string"
+}
+```
+
+**Response (Error)**:
+```json
+{
+  "success": false,
+  "error_code": "string",
+  "message": "string"
+}
+```
+
+**Authentication**: Bearer token (GitHub PAT)
+
+## Authentication Endpoint
+
+### POST /api/github/validate-token
+
+**Description**: Validates GitHub Personal Access Token
+
+**Request**:
+```json
+{
+  "token": "string"
+}
+```
+
+**Response (Success)**:
+```json
+{
+  "valid": true,
+  "username": "string",
+  "scopes": ["string"]
+}
+```
+
+**Response (Error)**:
+```json
+{
+  "valid": false,
+  "message": "string"
+}
+```
+
+**Authentication**: None (token provided in request)

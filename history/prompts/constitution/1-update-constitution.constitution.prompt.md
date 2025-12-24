@@ -1,15 +1,116 @@
-<!-- SYNC IMPACT REPORT:
-Version change: N/A (initial version) → 1.0.0
-Modified principles: N/A
-Added sections: Core Principles for Physical AI & Humanoid Robotics textbook
-Removed sections: N/A
-Templates requiring updates:
-  - .specify/templates/plan-template.md ✅ updated
-  - .specify/templates/spec-template.md ✅ updated
-  - .specify/templates/tasks-template.md ✅ updated
-  - .specify/templates/commands/*.md ⚠ pending
-Follow-up TODOs: None
--->
+---
+id: 1
+title: Update Constitution
+stage: constitution
+date: 2025-12-22
+surface: agent
+model: claude-sonnet-4-5-20250929
+feature: none
+branch: master
+user: Admin
+command: sp.constitution
+labels: [constitution, setup]
+links:
+  spec: null
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - .specify/memory/constitution.md
+tests:
+ - none
+---
+
+## Prompt
+
+You are a senior product architect, AI systems designer, and educator.
+
+Your task is to design and help build an AI-native, interactive textbook for
+Physical AI & Humanoid Robotics, strictly following the constitution below.
+
+========================
+PROJECT CONSTITUTION
+========================
+
+Mission:
+Build a fully AI-native, fast, simple, beautiful interactive textbook that teaches
+Physical AI & Humanoid Robotics. It must feel like a real AI-powered educational
+system — not a static book.
+
+Core Product:
+- Docusaurus-based interactive textbook
+- 6–8 short, modern chapters
+- Entire book readable in under 45 minutes
+- Education-first, not engineering documentation
+
+AI Features:
+- RAG-powered chatbot
+  - Answers ONLY from textbook content
+  - Grounded, accurate, and cited responses
+- Personalized explanations based on user background
+- One-click Urdu translation for every chapter
+- Auto-generated:
+  - Chapter summaries
+  - Quizzes
+  - Learning boosters (key points, examples)
+
+Platform & Stack:
+Frontend:
+- Docusaurus
+- Deployed on Vercel
+Backend:
+- FastAPI
+- Modular services and routes
+- Deployed on Railway
+Data:
+- Neon (Postgres)
+- Qdrant (Vector DB)
+Auth:
+- Better-Auth
+Architecture:
+- Clean, modular, scalable
+- Folder structure:
+  backend/
+    website/
+    rag/
+    agents/
+
+Constraints:
+- Must work on free tiers (Neon, Qdrant)
+- Demo-ready in 90 seconds
+- Mobile-first, low-end device friendly
+- Token usage controlled
+- No heavy animations
+- No long chapters
+- No math-heavy derivations
+- No robotics code
+- No unnecessary dependencies
+
+Success Criteria:
+- Clean, modern UI
+- Fast loading
+- Accurate, grounded RAG answers
+- Clear personalization impact
+- High-quality Urdu translation
+- All services deployed with live URLs
+- 90-second demo recorded
+
+User Priorities:
+1. Smooth reading experience
+2. Chatbot Q&A
+3. Personalization
+4. Urdu translation
+5. Summaries and quizzes
+6. Admin simplicity
+
+========================
+INSTRUCTIONS
+========================
+
+When responding:
+- Be concise, structured, and implementat
+
+## Response snapshot
 
 # Physical AI & Humanoid Robotics Interactive Textbook Constitution
 
@@ -70,3 +171,18 @@ Smooth reading experience is paramount. Chatbot Q&A, personalization, Urdu trans
 All implementations must align with the mission to build a fully AI-native, fast, simple, beautiful interactive textbook. Changes to core principles require explicit documentation of impact on user priorities and education-first goals. Architecture decisions must consider the 90-second demo requirement and free-tier constraints. The constitution serves as the authoritative guide for all technical and design decisions.
 
 **Version**: 1.0.0 | **Ratified**: 2025-12-22 | **Last Amended**: 2025-12-22
+
+## Outcome
+
+- ✅ Impact: Created initial project constitution for Physical AI & Humanoid Robotics interactive textbook
+- 🧪 Tests: none
+- 📁 Files: Updated .specify/memory/constitution.md with project-specific principles
+- 🔁 Next prompts: Continue with project setup and implementation
+- 🧠 Reflection: Constitution successfully captures all key requirements and constraints from the user specifications
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): PASS
+- Prompt variant (if applicable): N/A
+- Next experiment (smallest change to try): Begin implementing the textbook structure based on the constitution

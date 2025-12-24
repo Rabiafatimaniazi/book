@@ -1,0 +1,111 @@
+.chatContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatHeader {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 1rem;
+}
+
+.chatHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.chatHeader p {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 0;
+}
+
+.sources {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.sources summary {
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+}
+
+.sources ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1rem;
+}
+
+.sources li {
+  margin-bottom: 0.25rem;
+}
+
+.chatInputArea {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  gap: 0.5rem;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+}
+
+.chatSendButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chatSendButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.chatSendButton:not(:disabled):hover {
+  background-color: var(--ifm-color-primary-dark);
+}
